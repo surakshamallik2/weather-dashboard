@@ -21,7 +21,7 @@ city = st.text_input("Enter City Name", "Bangalore")
 # ---------------------
 # Fetch Weather Data
 # ---------------------
-api_key = "4b5ed2d3f0d409a23d2fac3eea8fadfe"  # Replace with your OpenWeatherMap API key
+api_key = st.secrets["api"]["weather_api"]  # Replace with your OpenWeatherMap API key
 
 def get_weather(city_name):
     base_url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric"
